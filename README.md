@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VivaPet - Modern Pet Shop Landing Page
 
-## Getting Started
+Uma landing page completa e responsiva para a VivaPet, um pet shop moderno que oferece serviços de banho, tosa, hospedagem, catálogo de produtos, agendamento online e contato.
 
-First, run the development server:
+## Tecnologias Utilizadas
+
+- **Next.js 15** com App Router
+- **TypeScript**
+- **Tailwind CSS v4**
+- Componentes UI locais simulando shadcn/ui
+
+## Como Rodar
+
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+2. Rode o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+3. Abra [http://localhost:3000](http://localhost:3000) no navegador.
+
+## Bibliotecas Opcionais
+
+Para funcionalidades extras, instale opcionalmente:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install @shadcn/ui lucide-react framer-motion class-variance-authority
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sem essas bibliotecas, o projeto usa componentes locais em `components/ui/*` que simulam a API do shadcn/ui.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Páginas Next.js
+- `components/`: Componentes React organizados por seção
+- `data/`: Dados mock para produtos e serviços
+- `lib/`: Utilitários e tipos TypeScript
+- `public/images/`: Imagens do projeto (substitua pelos arquivos reais)
 
-## Learn More
+## Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- Navbar responsiva com menu mobile
+- Seção Hero com call-to-actions
+- Serviços com cards interativos
+- Catálogo de produtos com badges
+- Formulário de agendamento com validação
+- Formulário de contato
+- Footer com links e informações
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO e Acessibilidade
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Metadados otimizados
+- Atributos alt em imagens
+- Estrutura semântica HTML
+- Labels e aria-required em formulários
 
-## Deploy on Vercel
+## Build e Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para deploy, use Vercel, Netlify ou qualquer plataforma que suporte Next.js.

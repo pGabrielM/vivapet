@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -9,13 +11,13 @@ html {
 }
 
 :root {
-  --background: #F8F8F8;
+  --background: #f8f8f8;
   --foreground: #333333;
-  --primary: #FF7B54;
-  --secondary: #FFD56F;
-  --accent: #4ECDC4;
-  --muted: #E5E7EB;
-  --border: #D1D5DB;
+  --primary: #ff7b54;
+  --secondary: #ffd56f;
+  --accent: #4ecdc4;
+  --muted: #e5e7eb;
+  --border: #d1d5db;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +25,7 @@ html {
     --background: #1a1a1a;
     --foreground: #ededed;
     --muted: #374151;
-    --border: #4B5563;
+    --border: #4b5563;
   }
 }
 

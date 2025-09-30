@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VivaPet - Modern Pet Shop Services",
-  description: "Discover VivaPet, your go-to modern pet shop for bathing, grooming, boarding, product catalog, online booking, and contact services.",
+  title: "VivaPet - Clínica Veterinária Especializada",
+  description: "Cuidado veterinário completo para cães e gatos. Consultas, vacinas, cirurgias e muito mais. Seu pet merece o melhor cuidado!",
 };
 
 export default function RootLayout({

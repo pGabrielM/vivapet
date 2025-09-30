@@ -1,2 +1,2 @@
 export { Navbar } from './Navbar';
-export { MobileMenu } from './MobileMenu';
+export { MobileMenu } from './mobile-menu';

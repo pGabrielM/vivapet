@@ -6,6 +6,14 @@ export interface Product {
   tags: string[];
 }
 
+export interface Doctor {
+  id: number;
+  name: string;
+  specialty: string;
+  image: string;
+  experience: string;
+}
+
 export interface Service {
   id: number;
   title: string;

@@ -1,18 +1,24 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { BookingData } from '../../lib/types';
+import { useState } from "react";
+import { Button } from "@/components/commons/button";
+import { Input } from "@/components/commons/input";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/commons/card";
+import { type BookingData } from "@/lib/types";
 
 export function BookingForm() {
   const [formData, setFormData] = useState<BookingData>({
-    name: '',
-    phone: '',
-    service: '',
-    date: '',
-    time: '',
+    name: "",
+    phone: "",
+    service: "",
+    date: "",
+    time: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -28,13 +34,14 @@ export function BookingForm() {
 
   if (submitted) {
     return (
-      <section id="booking" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="max-w-md mx-auto">
+      <section id="booking" className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Card className="mx-auto max-w-md">
             <CardHeader>
               <CardTitle>Agendamento Confirmado!</CardTitle>
               <CardDescription>
-                Obrigado, {formData.name}. Entraremos em contato em breve para confirmar os detalhes.
+                Obrigado, {formData.name}. Entraremos em contato em breve para confirmar os
+                detalhes.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -45,12 +52,12 @@ export function BookingForm() {
 
   return (
     <section id="booking" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Agende seu Serviço</h2>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Agende seu Serviço</h2>
           <p className="text-xl text-gray-600">Reserve um horário para cuidar do seu pet</p>
         </div>
-        <Card className="max-w-md mx-auto">
+        <Card className="mx-auto max-w-md">
           <CardHeader>
             <CardTitle>Formulário de Agendamento</CardTitle>
           </CardHeader>
@@ -94,7 +101,7 @@ export function BookingForm() {
                   required
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  className="border-input bg-background h-10 w-full rounded-md border px-3 py-2 text-sm"
                   aria-required="true"
                 >
                   <option value="">Selecione um serviço</option>

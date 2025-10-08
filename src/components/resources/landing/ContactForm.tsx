@@ -1,9 +1,15 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { useState } from "react";
+import { Button } from "@/components/commons/button";
+import { Input } from "@/components/commons/input";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/commons/card";
 
 interface ContactData {
   name: string;
@@ -13,9 +19,9 @@ interface ContactData {
 
 export function ContactForm() {
   const [formData, setFormData] = useState<ContactData>({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -31,19 +37,17 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <Card className="max-w-md mx-auto">
+      <Card className="mx-auto max-w-md">
         <CardHeader>
           <CardTitle>Mensagem Enviada!</CardTitle>
-          <CardDescription>
-            Obrigado, {formData.name}. Responderemos em breve.
-          </CardDescription>
+          <CardDescription>Obrigado, {formData.name}. Responderemos em breve.</CardDescription>
         </CardHeader>
       </Card>
     );
   }
 
   return (
-    <Card className="max-w-md mx-auto">
+    <Card className="mx-auto max-w-md">
       <CardHeader>
         <CardTitle>Entre em Contato</CardTitle>
         <CardDescription>Envie sua mensagem e retornaremos o contato.</CardDescription>
@@ -88,7 +92,7 @@ export function ContactForm() {
               required
               value={formData.message}
               onChange={handleChange}
-              className="w-full h-24 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring h-24 w-full rounded-md border px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               aria-required="true"
             />
           </div>

@@ -12,11 +12,13 @@ Uma landing page completa e responsiva para a VivaPet, um pet shop moderno que o
 ## Como Rodar
 
 1. Instale as dependências:
+
    ```bash
    npm install
    ```
 
 2. Rode o servidor de desenvolvimento:
+
    ```bash
    npm run dev
    ```

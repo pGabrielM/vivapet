@@ -3,7 +3,13 @@ export function ContactDetails() {
     <div className="space-y-4">
       <div>
         <h3 className="text-lg font-semibold">Endereço</h3>
-        <p className="text-gray-600">Rua dos Pets, 123<br />Cidade Feliz, SP<br />CEP: 01234-567</p>
+        <p className="text-gray-600">
+          Rua dos Pets, 123
+          <br />
+          Cidade Feliz, SP
+          <br />
+          CEP: 01234-567
+        </p>
       </div>
       <div>
         <h3 className="text-lg font-semibold">Telefone</h3>

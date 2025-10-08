@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "VivaPet - Clínica Veterinária Especializada",
-  description: "Cuidado veterinário completo para cães e gatos. Consultas, vacinas, cirurgias e muito mais. Seu pet merece o melhor cuidado!",
+  description:
+    "Cuidado veterinário completo para cães e gatos. Consultas, vacinas, cirurgias e muito mais. Seu pet merece o melhor cuidado!",
 };
 
 export default function RootLayout({
@@ -24,11 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
 }

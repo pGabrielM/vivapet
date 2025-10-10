@@ -1,13 +1,38 @@
-# VivaPet - Modern Pet Shop Landing Page
+# 🐾 VivaPet - Clínica Veterinária & Pet Shop
 
-Uma landing page completa e responsiva para a VivaPet, um pet shop moderno que oferece serviços de banho, tosa, hospedagem, catálogo de produtos, agendamento online e contato.
+![VivaPet Banner](public/favicon.svg)
+
+## 🎨 Visão Geral do Projeto
+
+VivaPet é uma landing page profissional e moderna para clínica veterinária e pet shop, desenvolvida com as mais recentes tecnologias web. O design foi cuidadosamente elaborado para transmitir confiança, profissionalismo e amor pelos animais.
+
+## ✨ Características Principais
+
+### Design Profissional
+
+- **Paleta de Cores Moderna**: Azul (#3b82f6) representando confiança, Laranja (#f97316) transmitindo energia e alegria dos pets
+- **Tipografia Otimizada**: Inter para corpo de texto e Poppins para títulos
+- **UI/UX Excepcional**: Interface intuitiva com animações suaves e transições fluidas
+- **Responsivo**: Perfeito em todos os dispositivos (mobile, tablet, desktop)
 
 ## Tecnologias Utilizadas
 
-- **Next.js 15** com App Router
-- **TypeScript**
-- **Tailwind CSS v4**
-- Componentes UI locais simulando shadcn/ui
+### Core
+
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **React 19** - Biblioteca JavaScript
+
+### Estilização
+
+- **TailwindCSS** - Framework CSS utility-first
+- **Shadcn/UI** - Componentes acessíveis e customizáveis
+- **Lucide React** - Ícones SVG modernos
+
+### Fontes
+
+- **Inter** - Fonte sans-serif para corpo
+- **Poppins** - Fonte display para títulos
 
 ## Como Rodar
 

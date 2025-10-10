@@ -1,8 +1,10 @@
 export interface Product {
   id: number;
   name: string;
+  description: string;
   price: number;
   image: string;
+  category: string;
   tags: string[];
 }
 
@@ -19,6 +21,7 @@ export interface Service {
   title: string;
   desc: string;
   icon: string;
+  image: string;
 }
 
 export interface BookingData {

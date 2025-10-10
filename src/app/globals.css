@@ -177,6 +177,7 @@ h6 {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px);
@@ -212,6 +213,7 @@ h6 {
 }
 
 @keyframes glow {
+
   0%,
   100% {
     opacity: 1;

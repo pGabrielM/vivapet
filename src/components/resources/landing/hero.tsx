@@ -141,9 +141,8 @@ export function Hero() {
             return (
               <Card
                 key={index}
-                className={`relative border-0 bg-white shadow-lg transition-all duration-700 hover:shadow-xl ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                }`}
+                className={`relative border-0 bg-white shadow-lg transition-all duration-700 hover:shadow-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                  }`}
                 style={{ transitionDelay: `${(index + 4) * 150}ms` }}
               >
                 <CardContent className="p-6">

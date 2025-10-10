@@ -211,6 +211,25 @@ h6 {
   }
 }
 
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 8px 2px rgba(59, 130, 246, 0.5);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+    box-shadow: 0 0 16px 4px rgba(59, 130, 246, 0.8);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
 /* Estilos personalizados para pets */
 .pet-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

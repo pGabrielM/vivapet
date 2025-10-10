@@ -68,15 +68,18 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         <p className="mb-6 leading-relaxed text-slate-600">{service.desc}</p>
 
         <Button
+          asChild
           variant="ghost"
           className="w-full justify-between transition-colors group-hover:bg-blue-50 group-hover:text-blue-600"
         >
-          <span className="font-semibold">Saiba mais</span>
-          <ArrowRight
-            className={`h-5 w-5 transition-transform ${
-              isHovered ? "translate-x-1" : "translate-x-0"
-            }`}
-          />
+          <a href="#booking">
+            <span className="font-semibold">Saiba mais</span>
+            <ArrowRight
+              className={`h-5 w-5 transition-transform ${
+                isHovered ? "translate-x-1" : "translate-x-0"
+              }`}
+            />
+          </a>
         </Button>
       </CardContent>
     </Card>

@@ -44,14 +44,24 @@ export function ProductCard({ product, index }: ProductCardProps) {
           }`}
         >
           <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-3">
-            <Button size="sm" className="bg-white text-slate-900 shadow-lg hover:bg-slate-100">
-              <ShoppingCart className="mr-2 h-4 w-4" />
-              Comprar
+            <Button
+              asChild
+              size="sm"
+              className="bg-white text-slate-900 shadow-lg hover:bg-slate-100"
+            >
+              <a href="#contact">
+                <ShoppingCart className="mr-2 h-4 w-4" />
+                Comprar
+              </a>
             </Button>
             <Button
               size="sm"
               variant="outline"
               className="border-0 bg-white/90 shadow-lg hover:bg-white"
+              onClick={(e) => {
+                e.preventDefault();
+                alert("Item adicionado aos favoritos!");
+              }}
             >
               <Heart className="h-4 w-4" />
             </Button>

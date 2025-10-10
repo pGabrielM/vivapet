@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Heart } from "lucide-react";
 import { Button } from "@/components/commons/button";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -11,16 +12,14 @@ export function Footer() {
             {/* Brand Section */}
             <div>
               <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                    className="drop-shadow"
-                  >
-                    <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4-3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                  </svg>
+                <div className="relative h-12 w-12">
+                  <Image
+                    src="/images/vivapet-logo.svg"
+                    alt="VivaPet Logo"
+                    width={48}
+                    height={48}
+                    className="drop-shadow-lg"
+                  />
                 </div>
                 <div>
                   <h3 className="font-[family-name:var(--font-poppins)] text-2xl font-bold">
@@ -33,25 +32,49 @@ export function Footer() {
               </p>
               <div className="flex gap-3">
                 <Button
+                  asChild
                   size="sm"
                   variant="outline"
                   className="border-slate-700 hover:border-blue-500 hover:bg-blue-500/10 hover:text-blue-400"
                 >
-                  <Facebook className="h-4 w-4" />
+                  <a
+                    href="https://facebook.com/vivapet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button
+                  asChild
                   size="sm"
                   variant="outline"
                   className="border-slate-700 hover:border-orange-500 hover:bg-orange-500/10 hover:text-orange-400"
                 >
-                  <Instagram className="h-4 w-4" />
+                  <a
+                    href="https://instagram.com/vivapet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button
+                  asChild
                   size="sm"
                   variant="outline"
                   className="border-slate-700 hover:border-blue-400 hover:bg-blue-400/10 hover:text-blue-400"
                 >
-                  <Twitter className="h-4 w-4" />
+                  <a
+                    href="https://twitter.com/vivapet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -99,11 +122,18 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-3 text-slate-400">
                   <Phone className="h-5 w-5 flex-shrink-0 text-blue-400" />
-                  <span>(11) 9999-9999</span>
+                  <a href="tel:+5511999999999" className="transition-colors hover:text-blue-400">
+                    (11) 9999-9999
+                  </a>
                 </li>
                 <li className="flex items-center gap-3 text-slate-400">
                   <Mail className="h-5 w-5 flex-shrink-0 text-blue-400" />
-                  <span>contato@vivapet.com</span>
+                  <a
+                    href="mailto:contato@vivapet.com"
+                    className="transition-colors hover:text-blue-400"
+                  >
+                    contato@vivapet.com
+                  </a>
                 </li>
               </ul>
             </div>

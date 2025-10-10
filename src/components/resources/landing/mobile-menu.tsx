@@ -32,15 +32,20 @@ export function MobileMenu({ isOpen, navLinks }: MobileMenuProps) {
 
           <div className="space-y-3 border-t border-slate-200 pt-4">
             <Button
+              asChild
               variant="outline"
               className="w-full gap-2 border-slate-300 hover:border-blue-600 hover:text-blue-600"
             >
-              <Phone className="h-4 w-4" />
-              <span>(11) 9999-9999</span>
+              <a href="tel:+5511999999999">
+                <Phone className="h-4 w-4" />
+                <span>(11) 9999-9999</span>
+              </a>
             </Button>
-            <Button className="w-full gap-2 bg-blue-600 shadow-lg hover:bg-blue-700">
-              <Calendar className="h-4 w-4" />
-              <span>Agendar Consulta</span>
+            <Button asChild className="w-full gap-2 bg-blue-600 shadow-lg hover:bg-blue-700">
+              <a href="#booking">
+                <Calendar className="h-4 w-4" />
+                <span>Agendar Consulta</span>
+              </a>
             </Button>
           </div>
         </div>

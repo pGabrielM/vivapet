@@ -64,17 +64,19 @@ export function Hero() {
 
             <div className="mb-12 flex flex-col gap-4 sm:flex-row">
               <Button
+                asChild
                 size="lg"
                 className="rounded-xl bg-blue-600 px-8 py-6 text-lg font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl"
               >
-                Agendar Consulta
+                <a href="#booking">Agendar Consulta</a>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="rounded-xl border-2 border-slate-300 px-8 py-6 text-lg font-semibold transition-all hover:border-blue-600 hover:text-blue-600"
               >
-                Nossos Serviços
+                <a href="#services">Nossos Serviços</a>
               </Button>
             </div>
 
@@ -105,7 +107,7 @@ export function Hero() {
               {/* Main Image */}
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=800&fit=crop"
+                  src="/images/hero/veterinario-pet.jpg"
                   alt="Veterinário cuidando de um pet"
                   width={600}
                   height={600}
@@ -139,7 +141,7 @@ export function Hero() {
             return (
               <Card
                 key={index}
-                className={`border-0 bg-white shadow-lg transition-all duration-700 hover:shadow-xl ${
+                className={`relative border-0 bg-white shadow-lg transition-all duration-700 hover:shadow-xl ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                 }`}
                 style={{ transitionDelay: `${(index + 4) * 150}ms` }}
@@ -153,18 +155,18 @@ export function Hero() {
                       {stat.number}
                     </div>
                     <div className="text-sm font-medium text-slate-600">{stat.label}</div>
+                    {/* Animated Dot Indicator */}
+                    <div className="mt-2">
+                      <div
+                        className="animate-glow h-2 w-2 rounded-full bg-blue-600"
+                        style={{ animationDelay: `${index * 300}ms` }}
+                      />
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             );
           })}
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce">
-        <div className="flex h-12 w-8 items-start justify-center rounded-full border-2 border-slate-300 p-2">
-          <div className="h-3 w-2 animate-pulse rounded-full bg-blue-600" />
         </div>
       </div>
     </section>

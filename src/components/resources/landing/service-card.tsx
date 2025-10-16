@@ -54,9 +54,8 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
           alt={title}
           width={600}
           height={400}
-          className={`h-full w-full object-cover transition-transform duration-500 ${
-            isHovered ? "scale-110" : "scale-100"
-          }`}
+          className={`h-full w-full object-cover transition-transform duration-500 ${isHovered ? "scale-110" : "scale-100"
+            }`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
 
@@ -80,9 +79,8 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
           <a href="#booking">
             <span className="font-semibold">{t("services.learnMore")}</span>
             <ArrowRight
-              className={`h-5 w-5 transition-transform ${
-                isHovered ? "translate-x-1" : "translate-x-0"
-              }`}
+              className={`h-5 w-5 transition-transform ${isHovered ? "translate-x-1" : "translate-x-0"
+                }`}
             />
           </a>
         </Button>

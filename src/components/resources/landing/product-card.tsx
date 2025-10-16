@@ -40,16 +40,14 @@ export function ProductCard({ product, index }: ProductCardProps) {
           alt={name}
           width={400}
           height={300}
-          className={`h-full w-full object-cover transition-transform duration-500 ${
-            isHovered ? "scale-110" : "scale-100"
-          }`}
+          className={`h-full w-full object-cover transition-transform duration-500 ${isHovered ? "scale-110" : "scale-100"
+            }`}
         />
 
         {/* Overlay with Actions */}
         <div
-          className={`absolute inset-0 bg-slate-900/60 transition-opacity duration-300 ${
-            isHovered ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-slate-900/60 transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"
+            }`}
         >
           <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-3">
             <Button

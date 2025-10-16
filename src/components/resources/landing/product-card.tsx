@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/commons/card";
 import { Badge } from "@/components/commons/badge";
@@ -15,6 +16,13 @@ interface ProductCardProps {
 
 export function ProductCard({ product, index }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const t = useTranslations();
+
+  const name = product.nameKey ? t(product.nameKey) : product.name || "Product";
+  const description = product.descriptionKey
+    ? t(product.descriptionKey)
+    : product.description || "";
+  const category = product.categoryKey ? t(product.categoryKey) : product.category || "";
 
   return (
     <Card
@@ -29,17 +37,19 @@ export function ProductCard({ product, index }: ProductCardProps) {
       <div className="relative h-64 overflow-hidden bg-slate-100">
         <Image
           src={product.image}
-          alt={product.name}
+          alt={name}
           width={400}
           height={300}
-          className={`h-full w-full object-cover transition-transform duration-500 ${isHovered ? "scale-110" : "scale-100"
-            }`}
+          className={`h-full w-full object-cover transition-transform duration-500 ${
+            isHovered ? "scale-110" : "scale-100"
+          }`}
         />
 
         {/* Overlay with Actions */}
         <div
-          className={`absolute inset-0 bg-slate-900/60 transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 bg-slate-900/60 transition-opacity duration-300 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
         >
           <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-3">
             <Button
@@ -49,7 +59,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
             >
               <a href="#contact">
                 <ShoppingCart className="mr-2 h-4 w-4" />
-                Comprar
+                {t("products.buy")}
               </a>
             </Button>
             <Button
@@ -82,15 +92,15 @@ export function ProductCard({ product, index }: ProductCardProps) {
       <CardContent className="p-6">
         <div className="mb-2">
           <Badge variant="outline" className="mb-2 text-xs">
-            {product.category}
+            {category}
           </Badge>
         </div>
 
         <h3 className="mb-2 line-clamp-2 min-h-[3.5rem] text-lg font-bold text-slate-900">
-          {product.name}
+          {name}
         </h3>
 
-        <p className="mb-4 line-clamp-2 text-sm text-slate-600">{product.description}</p>
+        <p className="mb-4 line-clamp-2 text-sm text-slate-600">{description}</p>
 
         <div className="flex items-center justify-between">
           <div>

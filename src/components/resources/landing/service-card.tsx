@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/commons/card";
 import { Button } from "@/components/commons/button";
 import { type Service } from "@/lib/types";
@@ -31,7 +32,11 @@ const iconMap = {
 
 export function ServiceCard({ service, index }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const t = useTranslations();
   const Icon = iconMap[service.icon as keyof typeof iconMap] || Stethoscope;
+
+  const title = service.titleKey ? t(service.titleKey) : service.title || "Service";
+  const description = service.descKey ? t(service.descKey) : service.desc || "";
 
   return (
     <Card
@@ -46,11 +51,12 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
       <div className="relative h-48 overflow-hidden">
         <Image
           src={service.image}
-          alt={service.title}
+          alt={title}
           width={600}
           height={400}
-          className={`h-full w-full object-cover transition-transform duration-500 ${isHovered ? "scale-110" : "scale-100"
-            }`}
+          className={`h-full w-full object-cover transition-transform duration-500 ${
+            isHovered ? "scale-110" : "scale-100"
+          }`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent" />
 
@@ -62,9 +68,9 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
       <CardContent className="p-6">
         <h3 className="mb-3 font-[family-name:var(--font-poppins)] text-xl font-bold text-slate-900">
-          {service.title}
+          {title}
         </h3>
-        <p className="mb-6 leading-relaxed text-slate-600">{service.desc}</p>
+        <p className="mb-6 leading-relaxed text-slate-600">{description}</p>
 
         <Button
           asChild
@@ -72,10 +78,11 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
           className="w-full justify-between transition-colors group-hover:bg-blue-50 group-hover:text-blue-600"
         >
           <a href="#booking">
-            <span className="font-semibold">Saiba mais</span>
+            <span className="font-semibold">{t("services.learnMore")}</span>
             <ArrowRight
-              className={`h-5 w-5 transition-transform ${isHovered ? "translate-x-1" : "translate-x-0"
-                }`}
+              className={`h-5 w-5 transition-transform ${
+                isHovered ? "translate-x-1" : "translate-x-0"
+              }`}
             />
           </a>
         </Button>

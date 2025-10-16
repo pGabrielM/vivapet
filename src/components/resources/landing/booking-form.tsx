@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/commons/button";
 import { Input } from "@/components/commons/input";
 import { Card, CardContent } from "@/components/commons/card";
@@ -8,6 +9,7 @@ import { type BookingData } from "@/lib/types";
 import { Calendar, Clock, User, Phone as PhoneIcon, CheckCircle2, Sparkles } from "lucide-react";
 
 export function BookingForm() {
+  const t = useTranslations("booking");
   const [formData, setFormData] = useState<BookingData>({
     name: "",
     phone: "",
@@ -37,23 +39,21 @@ export function BookingForm() {
                 <CheckCircle2 className="h-10 w-10 text-emerald-600" />
               </div>
               <h3 className="mb-4 font-[family-name:var(--font-poppins)] text-2xl font-bold text-slate-900">
-                Agendamento Confirmado!
+                {t("success.title")}
               </h3>
-              <p className="mb-6 text-slate-600">
-                Obrigado, <span className="font-semibold">{formData.name}</span>! Recebemos seu
-                agendamento e entraremos em contato em breve para confirmar os detalhes.
-              </p>
+              <p className="mb-6 text-slate-600">{t("success.message", { name: formData.name })}</p>
               <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm text-slate-700">
-                <p className="mb-2 font-semibold">Detalhes do Agendamento:</p>
+                <p className="mb-2 font-semibold">{t("success.detailsTitle")}</p>
                 <div className="space-y-1 text-left">
                   <p>
-                    📅 Data: <span className="font-medium">{formData.date}</span>
+                    📅 {t("success.date")} <span className="font-medium">{formData.date}</span>
                   </p>
                   <p>
-                    ⏰ Horário: <span className="font-medium">{formData.time}</span>
+                    ⏰ {t("success.time")} <span className="font-medium">{formData.time}</span>
                   </p>
                   <p>
-                    🐾 Serviço: <span className="font-medium">{formData.service}</span>
+                    🐾 {t("success.service")}{" "}
+                    <span className="font-medium">{formData.service}</span>
                   </p>
                 </div>
               </div>
@@ -70,15 +70,12 @@ export function BookingForm() {
         <div className="mb-16 text-center">
           <div className="mb-6 inline-flex items-center justify-center rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
             <Calendar className="mr-2 h-4 w-4" />
-            Agende Agora
+            {t("badge")}
           </div>
           <h2 className="mb-6 font-[family-name:var(--font-poppins)] text-4xl font-bold text-slate-900 md:text-5xl">
-            Reserve um Horário
+            {t("title")}
           </h2>
-          <p className="mx-auto max-w-2xl text-xl text-slate-600">
-            Preencha o formulário abaixo e nossa equipe entrará em contato para confirmar seu
-            agendamento.
-          </p>
+          <p className="mx-auto max-w-2xl text-xl text-slate-600">{t("description")}</p>
         </div>
 
         <Card className="mx-auto max-w-2xl border-0 bg-white shadow-2xl">
@@ -92,7 +89,7 @@ export function BookingForm() {
                     className="flex items-center gap-2 text-sm font-semibold text-slate-700"
                   >
                     <User className="h-4 w-4 text-blue-600" />
-                    Nome Completo
+                    {t("form.name")}
                   </label>
                   <Input
                     id="name"
@@ -101,7 +98,7 @@ export function BookingForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Digite seu nome"
+                    placeholder={t("form.namePlaceholder")}
                     className="h-12 border-slate-300 focus:border-blue-600"
                     aria-required="true"
                   />
@@ -114,7 +111,7 @@ export function BookingForm() {
                     className="flex items-center gap-2 text-sm font-semibold text-slate-700"
                   >
                     <PhoneIcon className="h-4 w-4 text-blue-600" />
-                    Telefone / WhatsApp
+                    {t("form.phone")}
                   </label>
                   <Input
                     id="phone"
@@ -123,7 +120,7 @@ export function BookingForm() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(11) 99999-9999"
+                    placeholder={t("form.phonePlaceholder")}
                     className="h-12 border-slate-300 focus:border-blue-600"
                     aria-required="true"
                   />
@@ -137,7 +134,7 @@ export function BookingForm() {
                   className="flex items-center gap-2 text-sm font-semibold text-slate-700"
                 >
                   <Sparkles className="h-4 w-4 text-blue-600" />
-                  Serviço Desejado
+                  {t("form.service")}
                 </label>
                 <select
                   id="service"
@@ -148,13 +145,13 @@ export function BookingForm() {
                   className="h-12 w-full rounded-lg border border-slate-300 bg-white px-4 text-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:outline-none"
                   aria-required="true"
                 >
-                  <option value="">Selecione um serviço</option>
-                  <option value="Consulta Veterinária">Consulta Veterinária</option>
-                  <option value="Vacinas">Vacinas e Prevenção</option>
-                  <option value="Cirurgia">Cirurgia</option>
-                  <option value="Exames">Exames Laboratoriais</option>
-                  <option value="Banho e Tosa">Banho e Tosa</option>
-                  <option value="Emergência">Emergência 24h</option>
+                  <option value="">{t("form.servicePlaceholder")}</option>
+                  <option value="Consulta Veterinária">{t("services.consultation")}</option>
+                  <option value="Vacinas">{t("services.vaccines")}</option>
+                  <option value="Cirurgia">{t("services.surgery")}</option>
+                  <option value="Exames">{t("services.exams")}</option>
+                  <option value="Banho e Tosa">{t("services.grooming")}</option>
+                  <option value="Emergência">{t("services.emergency")}</option>
                 </select>
               </div>
 
@@ -166,7 +163,7 @@ export function BookingForm() {
                     className="flex items-center gap-2 text-sm font-semibold text-slate-700"
                   >
                     <Calendar className="h-4 w-4 text-blue-600" />
-                    Data Preferida
+                    {t("form.date")}
                   </label>
                   <Input
                     id="date"
@@ -188,7 +185,7 @@ export function BookingForm() {
                     className="flex items-center gap-2 text-sm font-semibold text-slate-700"
                   >
                     <Clock className="h-4 w-4 text-blue-600" />
-                    Horário Preferido
+                    {t("form.time")}
                   </label>
                   <Input
                     id="time"
@@ -208,12 +205,10 @@ export function BookingForm() {
                 className="h-12 w-full bg-blue-600 text-lg font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl"
               >
                 <Calendar className="mr-2 h-5 w-5" />
-                Confirmar Agendamento
+                {t("form.submit")}
               </Button>
 
-              <p className="text-center text-sm text-slate-500">
-                ✨ Entraremos em contato em até 24 horas para confirmar
-              </p>
+              <p className="text-center text-sm text-slate-500">{t("form.notice")}</p>
             </form>
           </CardContent>
         </Card>

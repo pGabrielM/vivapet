@@ -1,66 +1,58 @@
-export interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  category: string;
-  tags: string[];
-}
+import { type Product } from "../lib/types";
 
 export const products: Product[] = [
   {
     id: 1,
-    name: "Ração Premium para Cães",
-    description: "Ração completa e balanceada para cães adultos de todas as raças",
+    nameKey: "products_data.items.1.name",
+    descriptionKey: "products_data.items.1.description",
     price: 89.9,
     image: "/images/products/racao-premium.jpg",
-    category: "Alimentação",
-    tags: ["Premium", "Cães"],
+    categoryKey: "products_data.categories.food",
+    tags: ["premium", "dogs"],
   },
   {
     id: 2,
-    name: "Shampoo Medicinal",
-    description: "Shampoo terapêutico para tratamento de pele e pelagem",
+    nameKey: "products_data.items.2.name",
+    descriptionKey: "products_data.items.2.description",
     price: 45.5,
     image: "/images/products/antipulgas.jpg",
-    category: "Higiene",
-    tags: ["Medicinal", "Pele"],
+    categoryKey: "products_data.categories.hygiene",
+    tags: ["medicinal", "skin"],
   },
   {
     id: 3,
-    name: "Antipulgas e Carrapatos",
-    description: "Tratamento preventivo eficaz contra parasitas externos",
+    nameKey: "products_data.items.3.name",
+    descriptionKey: "products_data.items.3.description",
     price: 67.8,
     image: "/images/products/brinquedos.jpg",
-    category: "Saúde",
-    tags: ["Parasitas", "Preventivo"],
+    categoryKey: "products_data.categories.health",
+    tags: ["parasites", "preventive"],
   },
   {
     id: 4,
-    name: "Cama Confortável",
-    description: "Cama ortopédica para cães de médio porte",
+    nameKey: "products_data.items.4.name",
+    descriptionKey: "products_data.items.4.description",
     price: 129.9,
     image: "/images/products/kit-higiene.jpg",
-    category: "Conforto",
-    tags: ["Ortopédica", "Conforto"],
+    categoryKey: "products_data.categories.comfort",
+    tags: ["orthopedic", "comfort"],
   },
   {
     id: 5,
-    name: "Brinquedo Interativo",
-    description: "Brinquedo inteligente para estimular a mente do seu pet",
+    nameKey: "products_data.items.5.name",
+    descriptionKey: "products_data.items.5.description",
     price: 34.9,
     image: "/images/products/coleiras.jpg",
-    category: "Brinquedos",
-    tags: ["Interativo", "Inteligente"],
+    categoryKey: "products_data.categories.toys",
+    tags: ["interactive", "intelligent"],
   },
   {
     id: 6,
-    name: "Suplemento Nutricional",
-    description: "Complexo vitamínico para saúde geral e vitalidade",
+    nameKey: "products_data.items.6.name",
+    descriptionKey: "products_data.items.6.description",
     price: 78.5,
     image: "/images/products/cama-conforto.jpg",
-    category: "Suplementos",
-    tags: ["Vitaminas", "Vitalidade"],
+    categoryKey: "products_data.categories.supplements",
+    tags: ["vitamins", "vitality"],
   },
 ];

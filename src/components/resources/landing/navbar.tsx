@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/commons/button";
+import { LanguageMenu } from "@/components/commons/language-menu";
 import { MobileMenu } from "./mobile-menu";
 import { Phone, Calendar, Menu, X } from "lucide-react";
 import Image from "next/image";
 
 export function Navbar() {
+  const t = useTranslations("nav");
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -20,16 +23,17 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#services", label: "Serviços" },
-    { href: "#products", label: "Produtos" },
-    { href: "#booking", label: "Agendamento" },
-    { href: "#contact", label: "Contato" },
+    { href: "#services", label: t("services") },
+    { href: "#products", label: t("products") },
+    { href: "#booking", label: t("booking") },
+    { href: "#contact", label: t("contact") },
   ];
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled ? "bg-white/95 shadow-lg backdrop-blur-md" : "bg-white/80 backdrop-blur-sm"
-        }`}
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-white/95 shadow-lg backdrop-blur-md" : "bg-white/80 backdrop-blur-sm"
+      }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -53,7 +57,7 @@ export function Navbar() {
               <h1 className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-slate-900">
                 Viva<span className="text-blue-600">Pet</span>
               </h1>
-              <p className="text-xs leading-none text-slate-600">Clínica Veterinária</p>
+              <p className="text-xs leading-none text-slate-600">{t("taglineClinic")}</p>
             </div>
           </a>
 
@@ -79,9 +83,9 @@ export function Navbar() {
               size="sm"
               className="gap-2 text-slate-700 hover:text-blue-600"
             >
-              <a href="tel:+5511999999999">
+              <a href="tel:+554198765432">
                 <Phone className="h-4 w-4" />
-                <span className="font-medium">(11) 9999-9999</span>
+                <span className="font-medium">(41) 99876-5432</span>
               </a>
             </Button>
             <Button
@@ -91,13 +95,15 @@ export function Navbar() {
             >
               <a href="#booking">
                 <Calendar className="h-4 w-4" />
-                <span>Agendar</span>
+                <span>{t("schedule")}</span>
               </a>
             </Button>
+            <LanguageMenu />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
+            <LanguageMenu />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-slate-700 transition-colors hover:text-blue-600 focus:outline-none"

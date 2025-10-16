@@ -14,8 +14,9 @@ interface MobileMenuProps {
 export function MobileMenu({ isOpen, navLinks }: MobileMenuProps) {
   return (
     <div
-      className={`transition-all duration-300 ease-in-out lg:hidden ${isOpen ? "max-h-screen opacity-100" : "max-h-0 overflow-hidden opacity-0"
-        }`}
+      className={`transition-all duration-300 ease-in-out lg:hidden ${
+        isOpen ? "max-h-screen opacity-100" : "max-h-0 overflow-hidden opacity-0"
+      }`}
     >
       <div className="border-t border-slate-200 bg-white shadow-lg">
         <div className="container mx-auto space-y-4 px-4 py-6">

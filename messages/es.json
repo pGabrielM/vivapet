@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "products": "Productos",
+    "team": "Equipo",
+    "booking": "Reserva",
+    "contact": "Contacto",
+    "schedule": "Agendar",
+    "taglineClinic": "Clínica Veterinaria"
+  },
+  "hero": {
+    "title": "Cuidado Completo para Tu Mascota",
+    "subtitle": "Clínica veterinaria de confianza con más de 15 años de experiencia",
+    "cta": "Reservar Cita",
+    "badge": "Cuidado con amor y profesionalismo",
+    "mainTitle": "Tu Mascota Merece el",
+    "mainTitleHighlight": "Mejor Cuidado",
+    "description": "Clínica veterinaria completa con equipo especializado, equipos modernos y atención 24 horas. Porque tu mascota es parte de la familia.",
+    "ctaBooking": "Reservar Cita",
+    "ctaServices": "Nuestros Servicios",
+    "features": {
+      "certified": "Profesionales Certificados",
+      "available24h": "Atención 24h"
+    },
+    "stats": {
+      "experience": "Años de Experiencia",
+      "petsServed": "Mascotas Atendidas",
+      "emergency": "Atención de Emergencia",
+      "satisfaction": "Satisfacción del Cliente",
+      "happyPets": "Mascotas Felices"
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Ofrecemos atención veterinaria completa para tu mejor amigo",
+    "badge": "Nuestros Servicios",
+    "mainTitle": "Cuidado Completo para tu Mascota",
+    "description": "Ofrecemos una gama completa de servicios veterinarios con profesionales especializados y equipos de última generación para garantizar la salud y el bienestar de tu mascota.",
+    "learnMore": "Más información"
+  },
+  "products": {
+    "title": "Productos Premium",
+    "subtitle": "Selección especial de productos para el bienestar de tu mascota",
+    "badge": "Pet Shop",
+    "mainTitle": "Productos para tu Mascota",
+    "description": "Seleccionamos los mejores productos para la salud, bienestar y diversión de tu mascota. Calidad garantizada y precios especiales.",
+    "buy": "Comprar"
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "subtitle": "Profesionales calificados y apasionados por los animales"
+  },
+  "booking": {
+    "badge": "Reservar Ahora",
+    "title": "Reserva un Horario",
+    "description": "Complete el formulario a continuación y nuestro equipo se pondrá en contacto para confirmar su cita.",
+    "form": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Ingrese su nombre",
+      "phone": "Teléfono / WhatsApp",
+      "phonePlaceholder": "(11) 99999-9999",
+      "service": "Servicio Deseado",
+      "servicePlaceholder": "Seleccione un servicio",
+      "date": "Fecha Preferida",
+      "time": "Hora Preferida",
+      "submit": "Confirmar Cita",
+      "notice": "✨ Nos pondremos en contacto en 24 horas para confirmar"
+    },
+    "services": {
+      "consultation": "Consulta Veterinaria",
+      "vaccines": "Vacunas y Prevención",
+      "surgery": "Cirugía",
+      "exams": "Exámenes de Laboratorio",
+      "grooming": "Baño y Peluquería",
+      "emergency": "Emergencia 24/7"
+    },
+    "success": {
+      "title": "¡Cita Confirmada!",
+      "message": "¡Gracias, {name}! Recibimos su cita y nos pondremos en contacto pronto para confirmar los detalles.",
+      "detailsTitle": "Detalles de la Cita:",
+      "date": "Fecha:",
+      "time": "Hora:",
+      "service": "Servicio:"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte a ti y a tu mascota",
+    "badge": "Contáctanos",
+    "mainTitle": "Habla con Nosotros",
+    "description": "Estamos aquí para ayudarte a ti y a tu mascota. Contáctanos para hacer preguntas, programar una visita o solicitar información.",
+    "info": {
+      "title": "Información de Contacto",
+      "address": "Dirección",
+      "phone": "Teléfono / WhatsApp",
+      "email": "Correo Electrónico",
+      "hours": "Horario de Atención",
+      "emergencies": "Emergencias 24/7",
+      "schedule": {
+        "weekdays": "Lunes - Viernes: 8h a 20h",
+        "saturday": "Sábado: 8h a 18h",
+        "sunday": "Domingo: 9h a 14h"
+      }
+    },
+    "form": {
+      "title": "Enviar un Mensaje",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Ingresa tu nombre",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudarte a ti y a tu mascota?",
+      "submit": "Enviar Mensaje",
+      "responseTime": "Responderemos en 24 horas",
+      "success": {
+        "title": "¡Mensaje Enviado!",
+        "message": "¡Gracias, {name}! Recibimos tu mensaje y responderemos lo antes posible."
+      }
+    },
+    "social": {
+      "title": "Síguenos en Redes Sociales",
+      "subtitle": "¡Mantente al día con consejos, noticias y promociones!"
+    }
+  },
+  "footer": {
+    "tagline": "Cuidado veterinario con amor y dedicación",
+    "quickLinks": "Enlaces Rápidos",
+    "contactInfo": "Contacto",
+    "hours": "Horario",
+    "weekdays": "Lunes - Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "emergencies": "Emergencias 24/7",
+    "copyright": "© 2025 VivaPet. Todos los derechos reservados.",
+    "taglineClinic": "Clínica Veterinaria",
+    "services": "Nuestros Servicios",
+    "products": "Productos",
+    "booking": "Reserva",
+    "contact": "Contacto",
+    "madeWith": "Hecho con",
+    "forPets": "para las mascotas",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "schedule": {
+      "weekdayRange": "8h - 20h",
+      "saturdayRange": "8h - 18h",
+      "sundayRange": "9h - 14h"
+    },
+    "socialLinks": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter"
+    }
+  },
+  "services_data": {
+    "consultation": {
+      "title": "Consultas Veterinarias",
+      "description": "Atención clínica completa con veterinarios especializados. Exámenes, diagnósticos y tratamientos personalizados para tu mascota."
+    },
+    "surgery": {
+      "title": "Cirugías y Procedimientos",
+      "description": "Centro quirúrgico equipado con tecnología de punta. Realizamos procedimientos simples hasta cirugías complejas con total seguridad."
+    },
+    "vaccines": {
+      "title": "Vacunas y Prevención",
+      "description": "Programa completo de vacunación y medicina preventiva. Protege tu mascota contra enfermedades con nuestro calendario de vacunas."
+    },
+    "exams": {
+      "title": "Exámenes de Laboratorio",
+      "description": "Laboratorio propio con equipos modernos. Resultados rápidos y precisos para diagnósticos certeros."
+    },
+    "grooming": {
+      "title": "Baño y Peluquería",
+      "description": "Servicio de estética mascota con profesionales calificados. Productos de alta calidad y cuidado especial para tu amigo."
+    },
+    "emergency": {
+      "title": "Emergencia 24/7",
+      "description": "Atención veterinaria de emergencia 24 horas al día, 7 días a la semana. Siempre estamos listos para cuidar a tu mascota."
+    }
+  },
+  "products_data": {
+    "items": {
+      "1": {
+        "name": "Alimento Premium para Perros",
+        "description": "Alimento completo y balanceado para perros adultos de todas las razas"
+      },
+      "2": {
+        "name": "Champú Medicinal",
+        "description": "Champú terapéutico para el tratamiento de piel y pelaje"
+      },
+      "3": {
+        "name": "Tratamiento Antipulgas y Garrapatas",
+        "description": "Tratamiento preventivo eficaz contra parásitos externos"
+      },
+      "4": {
+        "name": "Cama Confortable",
+        "description": "Cama ortopédica para perros de tamaño medio"
+      },
+      "5": {
+        "name": "Juguete Interactivo",
+        "description": "Juguete inteligente para estimular la mente de tu mascota"
+      },
+      "6": {
+        "name": "Suplemento Nutricional",
+        "description": "Complejo vitamínico para la salud general y vitalidad"
+      }
+    },
+    "categories": {
+      "food": "Alimentación",
+      "hygiene": "Higiene",
+      "health": "Salud",
+      "comfort": "Confort",
+      "toys": "Juguetes",
+      "supplements": "Suplementos"
+    },
+    "tags": {
+      "premium": "Premium",
+      "dogs": "Perros",
+      "medicinal": "Medicinal",
+      "skin": "Piel",
+      "parasites": "Parásitos",
+      "preventive": "Preventivo",
+      "orthopedic": "Ortopédica",
+      "interactive": "Interactivo",
+      "intelligent": "Inteligente",
+      "vitamins": "Vitaminas",
+      "vitality": "Vitalidad"
+    }
+  },
+  "doctors_data": {
+    "1": {
+      "name": "Dra. Ana Silva",
+      "specialty": "Veterinaria General",
+      "experience": "8 años"
+    },
+    "2": {
+      "name": "Dr. Carlos Santos",
+      "specialty": "Cirugía Veterinaria",
+      "experience": "12 años"
+    },
+    "3": {
+      "name": "Dra. María Oliveira",
+      "specialty": "Dermatología Veterinaria",
+      "experience": "6 años"
+    }
+  }
+}

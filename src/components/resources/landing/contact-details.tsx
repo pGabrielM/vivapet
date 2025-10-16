@@ -1,24 +1,22 @@
+"use client";
+
 import { Card, CardContent } from "@/components/commons/card";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Facebook,
-  Instagram,
-  Twitter,
-  MessageCircle,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/commons/button";
+import { useTranslations } from "next-intl";
 
 export function ContactDetails() {
+  const t = useTranslations("contact");
+
   return (
     <div className="space-y-6">
       {/* Main Info Card */}
       <Card className="overflow-hidden border-0 bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-2xl">
         <CardContent className="p-8 md:p-10">
           <h3 className="mb-6 font-[family-name:var(--font-poppins)] text-2xl font-bold">
-            Informações de Contato
+            {t("info.title")}
           </h3>
           <div className="space-y-6">
             {/* Endereço */}
@@ -27,13 +25,13 @@ export function ContactDetails() {
                 <MapPin className="h-6 w-6" />
               </div>
               <div>
-                <div className="mb-1 font-semibold">Endereço</div>
+                <div className="mb-1 font-semibold">{t("info.address")}</div>
                 <p className="leading-relaxed text-blue-100">
-                  Av. Principal, 1234
+                  Rua XV de Novembro, 850
                   <br />
-                  Centro, São Paulo - SP
+                  Centro, Curitiba - PR
                   <br />
-                  CEP: 01234-567
+                  CEP: 80020-310
                 </p>
               </div>
             </div>
@@ -44,9 +42,9 @@ export function ContactDetails() {
                 <Phone className="h-6 w-6" />
               </div>
               <div>
-                <div className="mb-1 font-semibold">Telefone / WhatsApp</div>
-                <p className="text-blue-100">(11) 9999-9999</p>
-                <p className="text-blue-100">(11) 3333-3333</p>
+                <div className="mb-1 font-semibold">{t("info.phone")}</div>
+                <p className="text-blue-100">(41) 99876-5432</p>
+                <p className="text-blue-100">(41) 3322-1100</p>
               </div>
             </div>
 
@@ -56,9 +54,9 @@ export function ContactDetails() {
                 <Mail className="h-6 w-6" />
               </div>
               <div>
-                <div className="mb-1 font-semibold">E-mail</div>
-                <p className="text-blue-100">contato@vivapet.com</p>
-                <p className="text-blue-100">emergencia@vivapet.com</p>
+                <div className="mb-1 font-semibold">{t("info.email")}</div>
+                <p className="text-blue-100">contato@vivapet.vet.br</p>
+                <p className="text-blue-100">emergencia@vivapet.vet.br</p>
               </div>
             </div>
 
@@ -68,14 +66,14 @@ export function ContactDetails() {
                 <Clock className="h-6 w-6" />
               </div>
               <div>
-                <div className="mb-2 font-semibold">Horário de Atendimento</div>
+                <div className="mb-2 font-semibold">{t("info.hours")}</div>
                 <div className="space-y-1 text-blue-100">
-                  <p>Segunda - Sexta: 8h às 20h</p>
-                  <p>Sábado: 8h às 18h</p>
-                  <p>Domingo: 9h às 14h</p>
+                  <p>{t("info.schedule.weekdays")}</p>
+                  <p>{t("info.schedule.saturday")}</p>
+                  <p>{t("info.schedule.sunday")}</p>
                 </div>
                 <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-3 py-1 text-sm font-semibold">
-                  ⚡ Emergências 24/7
+                  ⚡ {t("info.emergencies")}
                 </div>
               </div>
             </div>
@@ -87,31 +85,29 @@ export function ContactDetails() {
       <Card className="border-0 bg-white shadow-xl">
         <CardContent className="p-8">
           <h4 className="mb-4 font-[family-name:var(--font-poppins)] text-lg font-bold text-slate-900">
-            Redes Sociais
+            {t("social.title")}
           </h4>
-          <p className="mb-6 text-slate-600">
-            Siga-nos nas redes sociais e fique por dentro das novidades!
-          </p>
+          <p className="mb-6 text-slate-600">{t("social.subtitle")}</p>
           <div className="flex gap-3">
-            <Button size="lg" className="flex-1 gap-2 bg-blue-600 hover:bg-blue-700">
-              <Facebook className="h-5 w-5" />
+            <Button size="lg" className="flex-1 gap-2 bg-[#1877F2] hover:bg-[#1665D8]">
+              <FaFacebook className="h-5 w-5" />
               Facebook
             </Button>
             <Button
               size="lg"
-              className="flex-1 gap-2 bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+              className="flex-1 gap-2 bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90"
             >
-              <Instagram className="h-5 w-5" />
+              <FaInstagram className="h-5 w-5" />
               Instagram
             </Button>
           </div>
           <div className="mt-3 flex gap-3">
-            <Button size="lg" className="flex-1 gap-2 bg-blue-400 hover:bg-blue-500">
-              <Twitter className="h-5 w-5" />
+            <Button size="lg" className="flex-1 gap-2 bg-[#000000] hover:bg-[#333333]">
+              <FaXTwitter className="h-5 w-5" />
               Twitter
             </Button>
-            <Button size="lg" className="flex-1 gap-2 bg-emerald-500 hover:bg-emerald-600">
-              <MessageCircle className="h-5 w-5" />
+            <Button size="lg" className="flex-1 gap-2 bg-[#25D366] hover:bg-[#20BA5A]">
+              <FaWhatsapp className="h-5 w-5" />
               WhatsApp
             </Button>
           </div>

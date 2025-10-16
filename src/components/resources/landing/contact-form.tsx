@@ -5,6 +5,7 @@ import { Button } from "@/components/commons/button";
 import { Input } from "@/components/commons/input";
 import { Card, CardContent } from "@/components/commons/card";
 import { User, Mail as MailIcon, MessageSquare, Send, CheckCircle2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ContactData {
   name: string;
@@ -13,6 +14,7 @@ interface ContactData {
 }
 
 export function ContactForm() {
+  const t = useTranslations("contact.form");
   const [formData, setFormData] = useState<ContactData>({
     name: "",
     email: "",
@@ -32,25 +34,22 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <Card className="border-0 bg-white shadow-2xl">
+      <Card className="h-fit border-0 bg-white shadow-2xl">
         <CardContent className="p-12 text-center">
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100">
             <CheckCircle2 className="h-10 w-10 text-emerald-600" />
           </div>
           <h3 className="mb-4 font-[family-name:var(--font-poppins)] text-2xl font-bold text-slate-900">
-            Mensagem Enviada!
+            {t("success.title")}
           </h3>
-          <p className="text-slate-600">
-            Obrigado, <span className="font-semibold">{formData.name}</span>! Recebemos sua mensagem
-            e responderemos o mais breve possível.
-          </p>
+          <p className="text-slate-600">{t("success.message", { name: formData.name })}</p>
         </CardContent>
       </Card>
     );
   }
 
   return (
-    <Card className="border-0 bg-white shadow-2xl">
+    <Card className="h-fit border-0 bg-white shadow-2xl">
       <CardContent className="p-8 md:p-10">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Nome */}
@@ -60,7 +59,7 @@ export function ContactForm() {
               className="flex items-center gap-2 text-sm font-semibold text-slate-700"
             >
               <User className="h-4 w-4 text-blue-600" />
-              Nome Completo
+              {t("name")}
             </label>
             <Input
               id="contact-name"
@@ -69,7 +68,7 @@ export function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              placeholder="Digite seu nome"
+              placeholder={t("namePlaceholder")}
               className="h-12 border-slate-300 focus:border-blue-600"
               aria-required="true"
             />
@@ -82,7 +81,7 @@ export function ContactForm() {
               className="flex items-center gap-2 text-sm font-semibold text-slate-700"
             >
               <MailIcon className="h-4 w-4 text-blue-600" />
-              E-mail
+              {t("email")}
             </label>
             <Input
               id="contact-email"
@@ -91,7 +90,7 @@ export function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              placeholder="seu@email.com"
+              placeholder={t("emailPlaceholder")}
               className="h-12 border-slate-300 focus:border-blue-600"
               aria-required="true"
             />
@@ -104,7 +103,7 @@ export function ContactForm() {
               className="flex items-center gap-2 text-sm font-semibold text-slate-700"
             >
               <MessageSquare className="h-4 w-4 text-blue-600" />
-              Mensagem
+              {t("message")}
             </label>
             <textarea
               id="contact-message"
@@ -112,7 +111,7 @@ export function ContactForm() {
               required
               value={formData.message}
               onChange={handleChange}
-              placeholder="Como podemos ajudar você e seu pet?"
+              placeholder={t("messagePlaceholder")}
               className="h-32 w-full resize-none rounded-lg border border-slate-300 px-4 py-3 text-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:outline-none"
               aria-required="true"
             />
@@ -123,10 +122,10 @@ export function ContactForm() {
             className="h-12 w-full bg-blue-600 text-lg font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl"
           >
             <Send className="mr-2 h-5 w-5" />
-            Enviar Mensagem
+            {t("submit")}
           </Button>
 
-          <p className="text-center text-sm text-slate-500">✨ Responderemos em até 24 horas</p>
+          <p className="text-center text-sm text-slate-500">✨ {t("responseTime")}</p>
         </form>
       </CardContent>
     </Card>

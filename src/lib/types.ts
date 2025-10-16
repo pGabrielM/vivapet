@@ -1,25 +1,33 @@
 export interface Product {
   id: number;
-  name: string;
-  description: string;
+  nameKey?: string;
+  name?: string;
+  descriptionKey?: string;
+  description?: string;
   price: number;
   image: string;
-  category: string;
+  categoryKey?: string;
+  category?: string;
   tags: string[];
 }
 
 export interface Doctor {
   id: number;
-  name: string;
-  specialty: string;
+  nameKey?: string;
+  name?: string;
+  specialtyKey?: string;
+  specialty?: string;
   image: string;
-  experience: string;
+  experienceKey?: string;
+  experience?: string;
 }
 
 export interface Service {
   id: number;
-  title: string;
-  desc: string;
+  titleKey?: string;
+  title?: string;
+  descKey?: string;
+  desc?: string;
   icon: string;
   image: string;
 }

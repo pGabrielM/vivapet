@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/commons/button";
 import { Card, CardContent } from "@/components/commons/card";
 import { Heart, Shield, Clock, Award } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
+  const t = useTranslations("hero");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -14,10 +16,10 @@ export function Hero() {
   }, []);
 
   const stats = [
-    { number: "10+", label: "Anos de Experiência", icon: Award },
-    { number: "5000+", label: "Pets Atendidos", icon: Heart },
-    { number: "24/7", label: "Atendimento Emergencial", icon: Clock },
-    { number: "98%", label: "Satisfação dos Clientes", icon: Shield },
+    { number: "10+", label: t("stats.experience"), icon: Award },
+    { number: "5000+", label: t("stats.petsServed"), icon: Heart },
+    { number: "24/7", label: t("stats.emergency"), icon: Clock },
+    { number: "98%", label: t("stats.satisfaction"), icon: Shield },
   ];
 
   return (
@@ -50,16 +52,16 @@ export function Hero() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
               <Heart className="h-4 w-4" />
-              <span>Cuidado com amor e profissionalismo</span>
+              <span>{t("badge")}</span>
             </div>
 
             <h1 className="mb-6 font-[family-name:var(--font-poppins)] text-5xl leading-tight font-bold text-slate-900 lg:text-6xl xl:text-7xl">
-              Seu Pet Merece o<span className="mt-2 block text-blue-600">Melhor Cuidado</span>
+              {t("mainTitle")}
+              <span className="mt-2 block text-blue-600">{t("mainTitleHighlight")}</span>
             </h1>
 
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-600 lg:text-xl">
-              Clínica veterinária completa com equipe especializada, equipamentos modernos e
-              atendimento 24 horas. Porque seu pet faz parte da família.
+              {t("description")}
             </p>
 
             <div className="mb-12 flex flex-col gap-4 sm:flex-row">
@@ -68,7 +70,7 @@ export function Hero() {
                 size="lg"
                 className="rounded-xl bg-blue-600 px-8 py-6 text-lg font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl"
               >
-                <a href="#booking">Agendar Consulta</a>
+                <a href="#booking">{t("ctaBooking")}</a>
               </Button>
               <Button
                 asChild
@@ -76,7 +78,7 @@ export function Hero() {
                 size="lg"
                 className="rounded-xl border-2 border-slate-300 px-8 py-6 text-lg font-semibold transition-all hover:border-blue-600 hover:text-blue-600"
               >
-                <a href="#services">Nossos Serviços</a>
+                <a href="#services">{t("ctaServices")}</a>
               </Button>
             </div>
 
@@ -87,14 +89,16 @@ export function Hero() {
                   <Shield className="h-5 w-5 text-emerald-600" />
                 </div>
                 <span className="text-sm font-medium text-slate-700">
-                  Profissionais Certificados
+                  {t("features.certified")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
                   <Clock className="h-5 w-5 text-blue-600" />
                 </div>
-                <span className="text-sm font-medium text-slate-700">Atendimento 24h</span>
+                <span className="text-sm font-medium text-slate-700">
+                  {t("features.available24h")}
+                </span>
               </div>
             </div>
           </div>
@@ -126,7 +130,7 @@ export function Hero() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-slate-900">5000+</div>
-                    <div className="text-sm text-slate-600">Pets Felizes</div>
+                    <div className="text-sm text-slate-600">{t("stats.happyPets")}</div>
                   </div>
                 </div>
               </div>
@@ -141,8 +145,9 @@ export function Hero() {
             return (
               <Card
                 key={index}
-                className={`relative border-0 bg-white shadow-lg transition-all duration-700 hover:shadow-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                  }`}
+                className={`relative border-0 bg-white shadow-lg transition-all duration-700 hover:shadow-xl ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                }`}
                 style={{ transitionDelay: `${(index + 4) * 150}ms` }}
               >
                 <CardContent className="p-6">

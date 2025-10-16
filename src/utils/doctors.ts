@@ -3,23 +3,23 @@ import { type Doctor } from "../lib/types";
 export const doctors: Doctor[] = [
   {
     id: 1,
-    name: "Dra. Ana Silva",
-    specialty: "Veterinária Geral",
+    nameKey: "doctors_data.1.name",
+    specialtyKey: "doctors_data.1.specialty",
     image: "/images/doctors/dra-patricia-santos.jpg",
-    experience: "8 anos",
+    experienceKey: "doctors_data.1.experience",
   },
   {
     id: 2,
-    name: "Dr. Carlos Santos",
-    specialty: "Cirurgia Veterinária",
+    nameKey: "doctors_data.2.name",
+    specialtyKey: "doctors_data.2.specialty",
     image: "/images/doctors/dr-ricardo-costa.jpg",
-    experience: "12 anos",
+    experienceKey: "doctors_data.2.experience",
   },
   {
     id: 3,
-    name: "Dra. Maria Oliveira",
-    specialty: "Dermatologia Veterinária",
+    nameKey: "doctors_data.3.name",
+    specialtyKey: "doctors_data.3.specialty",
     image: "/images/doctors/dra-juliana-almeida.jpg",
-    experience: "6 anos",
+    experienceKey: "doctors_data.3.experience",
   },
 ];

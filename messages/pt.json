@@ -65,7 +65,15 @@
       "date": "Data Preferida",
       "time": "Horário Preferido",
       "submit": "Confirmar Agendamento",
-      "notice": "✨ Entraremos em contato em até 24 horas para confirmar"
+      "notice": "✨ Entraremos em contato em até 24 horas para confirmar",
+      "errors": {
+        "nameRequired": "Nome é obrigatório",
+        "phoneRequired": "Telefone é obrigatório",
+        "phoneInvalid": "Telefone inválido. Use o formato (XX) XXXXX-XXXX",
+        "serviceRequired": "Selecione um serviço",
+        "dateRequired": "Data é obrigatória",
+        "timeRequired": "Horário é obrigatório"
+      }
     },
     "services": {
       "consultation": "Consulta Veterinária",

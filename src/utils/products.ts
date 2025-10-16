@@ -35,7 +35,7 @@ export const products: Product[] = [
     price: 129.9,
     image: "/images/products/kit-higiene.jpg",
     categoryKey: "products_data.categories.comfort",
-    tags: ["orthopedic", "comfort"],
+    tags: ["hygiene", "grooming"],
   },
   {
     id: 5,

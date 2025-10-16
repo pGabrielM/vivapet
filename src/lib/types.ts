@@ -30,6 +30,7 @@ export interface Service {
   desc?: string;
   icon: string;
   image: string;
+  price?: number;
 }
 
 export interface BookingData {

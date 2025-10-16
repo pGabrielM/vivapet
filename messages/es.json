@@ -65,7 +65,15 @@
       "date": "Fecha Preferida",
       "time": "Hora Preferida",
       "submit": "Confirmar Cita",
-      "notice": "✨ Nos pondremos en contacto en 24 horas para confirmar"
+      "notice": "✨ Nos pondremos en contacto en 24 horas para confirmar",
+      "errors": {
+        "nameRequired": "El nombre es obligatorio",
+        "phoneRequired": "El teléfono es obligatorio",
+        "phoneInvalid": "Teléfono inválido. Use formato (XX) XXXXX-XXXX",
+        "serviceRequired": "Por favor, seleccione un servicio",
+        "dateRequired": "La fecha es obligatoria",
+        "timeRequired": "La hora es obligatoria"
+      }
     },
     "services": {
       "consultation": "Consulta Veterinaria",

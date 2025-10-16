@@ -1,9 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Card, CardContent } from "@/components/commons/card";
 import { Button } from "@/components/commons/button";
 import { type Service } from "@/lib/types";
+import { formatCurrency } from "@/utils/currency";
 import {
   Stethoscope,
   Scissors,
@@ -33,10 +34,12 @@ const iconMap = {
 export function ServiceCard({ service, index }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const t = useTranslations();
+  const locale = useLocale() as "pt" | "en" | "es";
   const Icon = iconMap[service.icon as keyof typeof iconMap] || Stethoscope;
 
   const title = service.titleKey ? t(service.titleKey) : service.title || "Service";
   const description = service.descKey ? t(service.descKey) : service.desc || "";
+  const formattedPrice = service.price ? formatCurrency(service.price, locale) : null;
 
   return (
     <Card
@@ -63,6 +66,13 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         <div className="absolute top-4 right-4 flex h-14 w-14 items-center justify-center rounded-xl bg-white shadow-lg">
           <Icon className="h-7 w-7 text-blue-600" />
         </div>
+
+        {/* Price Badge */}
+        {formattedPrice && (
+          <div className="absolute bottom-4 left-4 flex items-center justify-center rounded-xl bg-white/95 px-3 py-2 shadow-lg backdrop-blur-sm">
+            <span className="font-semibold text-slate-900">{formattedPrice}</span>
+          </div>
+        )}
       </div>
 
       <CardContent className="p-6">

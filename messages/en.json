@@ -65,7 +65,15 @@
       "date": "Preferred Date",
       "time": "Preferred Time",
       "submit": "Confirm Appointment",
-      "notice": "✨ We'll contact you within 24 hours to confirm"
+      "notice": "✨ We'll contact you within 24 hours to confirm",
+      "errors": {
+        "nameRequired": "Name is required",
+        "phoneRequired": "Phone is required",
+        "phoneInvalid": "Invalid phone. Use format (XX) XXXXX-XXXX",
+        "serviceRequired": "Please select a service",
+        "dateRequired": "Date is required",
+        "timeRequired": "Time is required"
+      }
     },
     "services": {
       "consultation": "Veterinary Consultation",

@@ -7,6 +7,7 @@ export const services: Service[] = [
     descKey: "services_data.consultation.description",
     icon: "Stethoscope",
     image: "/images/services/consultas-veterinarias.jpg",
+    price: 150,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const services: Service[] = [
     descKey: "services_data.surgery.description",
     icon: "Scissors",
     image: "/images/services/cirurgias-procedimentos.jpg",
+    price: 800,
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const services: Service[] = [
     descKey: "services_data.vaccines.description",
     icon: "Syringe",
     image: "/images/services/vacinas-prevencao.jpg",
+    price: 120,
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const services: Service[] = [
     descKey: "services_data.exams.description",
     icon: "Microscope",
     image: "/images/services/exames-laboratoriais.jpg",
+    price: 250,
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ export const services: Service[] = [
     descKey: "services_data.grooming.description",
     icon: "Sparkles",
     image: "/images/services/banho-tosa.jpg",
+    price: 100,
   },
   {
     id: 6,
@@ -42,5 +47,6 @@ export const services: Service[] = [
     descKey: "services_data.emergency.description",
     icon: "Ambulance",
     image: "/images/services/emergencia-24h.jpg",
+    price: 300,
   },
 ];

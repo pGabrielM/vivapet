@@ -252,3 +252,44 @@ h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Liquid Glass Effect - iOS 26 Style */
+.glass-nav-item {
+  position: relative;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.glass-nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.glass-nav-item-active {
+  position: relative;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(59, 130, 246, 0.25);
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.glass-nav-item-active:hover {
+  background-color: rgba(59, 130, 246, 0.35);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 12px 20px rgba(59, 130, 246, 0.2);
+  transform: translateY(-4px);
+}

@@ -12,10 +12,28 @@ export function Navbar() {
   const t = useTranslations("nav");
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Detect active section
+      const sections = ["services", "products", "booking", "contact"];
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
+      } else if (window.scrollY < 100) {
+        setActiveSection("");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -62,15 +80,18 @@ export function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-8 lg:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="group relative font-medium text-slate-700 transition-colors hover:text-blue-600"
+                className={`transition-all duration-300 ${
+                  activeSection === link.href.slice(1)
+                    ? "glass-nav-item-active"
+                    : "glass-nav-item text-slate-700 hover:text-blue-600"
+                }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all group-hover:w-full" />
               </a>
             ))}
           </div>
